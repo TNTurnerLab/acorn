@@ -1,6 +1,4 @@
 exportPattern("^[[:alpha:]]+")
-#importFrom("bio3d", "read.pdb")
-#importFrom("data.table", "fread")
 export("readDNV")
 export("extractSNVs")
 export("extractINDELs")
