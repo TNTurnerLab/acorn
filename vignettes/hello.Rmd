@@ -1,0 +1,22 @@
+---
+title: "hello.Rmd"
+output: html_document
+date: "2022-10-22"
+vignette: >
+    %\VignetteIndexEntry{hello}
+    %\VignetteEngine{knitr::knitr}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+#library(knitr)
+#library(tools)
+#names(vignetteEngine(package = 'knitr'))
+#knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r chunkName, eval=FALSE}
+    hello(3)
+
+#you reference other functions as bio3d::read.pdb()
+```
