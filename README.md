@@ -10,6 +10,20 @@
 
 **Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
 
+**Example Files:** Files for use in testing are available in `inst/extdata` and include
+
+Example DNV files
+```
+dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz
+dnms_from_Ng_et_al_2022_Human_Mutation_paper_not_compressed.txt
+```
+
+Example files for parental age information
+```
+dnm_count_example.txt
+parental_age_example.txt 
+```
+
 **Current Functions:"
 
 Function to read in a file for use in many of the other functions in acorn.
