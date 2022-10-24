@@ -27,6 +27,13 @@ Returns back a loaded in version of the DNV file that can be assigned to
 an object.
 ```
 
+Function to extract a given individual:
+```
+extractIndividual = Extracts the DNVs out of a dnvObject from a particular 
+individual. Returns a DNV object containing only DNVs in the specified
+individual.
+``` 
+
 Functions to extract by variant type:
 ```
 extractSNVs = Extracts single-nucleotide variants (SNVs) out from a DNV object
