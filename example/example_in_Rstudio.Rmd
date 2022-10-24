@@ -1,0 +1,134 @@
+---
+title: "acorn example in Rstudio"
+author: "Tychele N. Turner, Ph.D., Washington University School of Medicine"
+date: "2022-10-24"
+output:
+  html_document: default
+  pdf_document: default
+abstract: This document contains documentation for using acorn. 
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### call up acorn
+```{r}
+library('acorn')
+```
+
+### check out acorn functions
+```{r}
+lsf.str("package:acorn")
+```
+
+### load in test data
+```{r}
+input <- readDNV("~/Documents/Github/acorn/inst/extdata/dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz")
+head(input)
+str(input)
+```
+
+### extract SNVs
+```{r}
+snvs <- extractSNVs(input)
+nrow(snvs)
+```
+
+### extract indels
+```{r}
+indels <- extractINDELs(input)
+nrow(indels)
+```
+
+### extract MNVs (there are none in the test set)
+```{r}
+mnvs <- extractMNVs(input)
+nrow(mnvs)
+```
+
+### calculate the Transition/Transversion ratio
+```{r}
+calculateTiTvratio(input)
+```
+
+### calculate deletion/insertion ratio
+```{r}
+calculateDeletionInsertionratio(input)
+```
+
+### calculate deletion lengths
+```{r}
+dellengths <- calculateDeletionlengths(input)
+head(dellengths)
+```
+
+### calculate insertion lengths
+```{r}
+inslengths <- calculateInsertionLengths(input)
+head(inslengths)
+```
+
+### keep only the autosomes
+```{r}
+aut <- extractAutosomes(input)
+nrow(aut)
+table(aut[,2])
+```
+
+### keep only the X chromosome
+```{r}
+X <- extractX(input)
+nrow(X)
+table(X[,2])
+```
+
+### keep only the Y chromosome (there are none on the Y in the test dataset)
+```{r}
+Y <- extractY(input)
+nrow(Y)
+```
+
+### annotate the CpG (note it takes ~45 seconds to even read the CpG annotation file so this function is a little slow)
+```{r}
+cpgResult <- annotateCpG(input, "~/Documents/Github/accessory_files/for_acorn/cpg_b38.rda")
+head(cpgResult)
+```
+
+### calculate counts per individual
+```{r}
+counts <- countsPerIndividual(input)
+head(counts)
+```
+
+### load in example data for parental age analyses
+```{r}
+countExample <- read.delim("~/Documents/Github/acorn/inst/extdata/dnm_count_example.txt")
+parentExample <- read.delim("~/Documents/Github/acorn/inst/extdata/parental_age_example.txt")
+```
+
+### make parental age object
+```{r}
+parents <- parentalAgeObject(countExample, parentExample)
+```
+
+### run parental age analyses including both mother and father
+```{r}
+parentalAge(parents)
+```
+
+### run parental age analyses for father age only
+```{r}
+fatherAge(parents)
+```
+
+### run parental age analyses for mother age only
+```{r}
+motherAge(parents)
+```
+
+
+
+
+
