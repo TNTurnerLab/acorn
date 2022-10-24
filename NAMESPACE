@@ -17,3 +17,5 @@ export("fatherAge")
 export("motherAge")
 export("parentalAge")
 export("annotateCpG")
+export("extractIndividual")
+

@@ -170,3 +170,6 @@ dnm_counts ~ motherAge, data = parentalAgeObject). It also returns a plot of
 mother's age at birth and DNV counts.
 ```
 
+**Implementation of functions in an Rstudio session:** An example of running the code in Rstudio is found in the `example` directory.
+
+
