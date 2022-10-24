@@ -6,11 +6,12 @@
 
 **Current version:** 0.1.0
 
-**Readme Date:** 10/23/2022
+**Readme Update Date:** 10/24/2022
 
 **Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
 
 **Current Functions:"
+
 Function to read in a file for use in many of the other functions in acorn.
 ```
 readDNV = Reads in a de novo variant (DNV) file in the format of sample, 
