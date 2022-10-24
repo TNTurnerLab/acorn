@@ -10,7 +10,7 @@ parentalAge <- function(parentalAgeObject) {
 
     confint(fitLinearAll)
 
-    out <- list(cor.test(parentalAgeObject[,4], parentalAgeObject[,2]), summary(fitLinearAll), confint(fitLinearAll))
+    out <- list(summary(fitLinearAll), confint(fitLinearAll))
     attr(out, "names") <- c("summary of linear model for father's and mother's age at birth and DNV counts", "confidence interval of linear model for father's and mother's age at birth and DNV counts")
     return(out)
 }
