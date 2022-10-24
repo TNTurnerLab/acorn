@@ -30,6 +30,22 @@ head(input)
 str(input)
 ```
 
+### extract individual
+```{r}
+ind <- extractIndividual(input, "HG01928")
+head(ind)
+nrow(ind)
+table(ind[,1])
+```
+
+### extract individuals if you want
+```{r}
+ind <- extractIndividual(input, c("HG01928", "HG03915"))
+head(ind)
+nrow(ind)
+table(ind[,1])
+```
+
 ### extract SNVs
 ```{r}
 snvs <- extractSNVs(input)
