@@ -13,7 +13,7 @@
 **Install:**
 These two commands below should install acorn to R and make it callable inside R with `library('acorn')`
 ```
-wget https://github.com/TNTurnerLab/acorn/blob/main/releases/acorn_0.1.0.tar.gz
+wget https://github.com/TNTurnerLab/acorn/raw/main/releases/acorn_0.1.0.tar.gz
 R CMD INSTALL acorn_0.1.0.tar.gz
 ```
 
