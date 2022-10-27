@@ -24,7 +24,7 @@ dnm_count_example.txt
 parental_age_example.txt 
 ```
 
-**Current Functions:"
+**Current Functions:**
 
 Function to read in a file for use in many of the other functions in acorn.
 ```
