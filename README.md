@@ -6,7 +6,7 @@
 
 **Current version:** 0.1.0
 
-**Readme Update Date:** 10/24/2022
+**Readme Update Date:** 10/26/2022
 
 **Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
 
@@ -116,9 +116,12 @@ annotateCpG = Extracts single-nucleotide variants (SNVs) out from a DNV
 object generated using the readDNV function and assigns whether they are at
 a CpG site or not. This function also requires a pre-computed rda file for 
 the CpG sites in the genome of interest. This is available for b38 of the
-human genome at: . Returns a DNV object containing only SNVs and includes 
-a column with a note on whether the DNV is at a CpG or not. This function 
-also prints out the number of CpG and the precent of DNV SNVs at CpG.
+human genome at:  
+https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda. 
+Returns a DNV object containing only SNVs and includes a column with a 
+note on whether the DNV is at a CpG or not. This function also prints 
+out the number of CpG and the precent of DNV SNVs at CpG. Please note 
+this function typically takes at least one minute to run.
 ```
 
 Summary of DNV counts per individual. Also, useful to generate input for the parentalAgeObject
