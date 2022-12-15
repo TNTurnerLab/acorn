@@ -1,5 +1,7 @@
 # acorn
 
+![Acorn](image/2022-10-23_Acorn_TNT_blt.jpg "Acorn")
+
 **Author:** Tychele N. Turner, Ph.D.
 
 **License:** MIT License
