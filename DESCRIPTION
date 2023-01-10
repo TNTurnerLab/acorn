@@ -1,5 +1,4 @@
 Package: acorn
-Type: R Package
 Title: This package is a toolkit for working with de novo variants.
 Version: 0.99.0
 Authors@R: 
@@ -16,5 +15,4 @@ License: MIT
 Depends: R (>= 3.5.0)
 Suggests: knitr
 VignetteBuilder: knitr
-biocViews: Software
 biocViews: GenomicVariation
