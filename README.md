@@ -6,17 +6,17 @@
 
 **License:** MIT License
 
-**Current version:** 0.1.0
+**Current version:** 0.99.0
 
-**Readme Update Date:** 10/26/2022
+**Readme Update Date:** 01/18/2023
 
 **Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
 
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://github.com/TNTurnerLab/acorn/raw/main/releases/acorn_0.1.0.tar.gz
-R CMD INSTALL acorn_0.1.0.tar.gz
+wget https://github.com/TNTurnerLab/acorn/raw/main/releases/acorn_0.99.0.tar.gz
+R CMD INSTALL acorn_0.99.0.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
