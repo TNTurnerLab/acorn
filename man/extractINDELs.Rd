@@ -4,6 +4,9 @@
 \usage{
 extractINDELs(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 Extracts small insertions/deletions (INDELs) out from a DNV object generated using the readDNV function.
 }

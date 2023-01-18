@@ -4,6 +4,9 @@
 \usage{
 extractMNVs(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 Extracts multi-nucleotide variants (MNVs) out from a DNV object generated using the readDNV function.
 }

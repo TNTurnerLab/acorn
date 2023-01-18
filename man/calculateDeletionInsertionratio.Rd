@@ -4,6 +4,9 @@
 \usage{
 calculateDeletionInsertionratio(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 This function will automatically grab only the INDELs from the DNV object for the calculation of the deletion/insertion ratio.
 }

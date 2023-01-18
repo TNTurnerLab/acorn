@@ -4,6 +4,9 @@
 \usage{
 calculateTiTvratio(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 This function will automatically grab only the SNVs from the DNV object for the calculation of the transition/transversion (Ti/Tv) ratio.
 }

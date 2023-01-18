@@ -4,6 +4,9 @@
 \usage{
 extractAutosomes(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 Extracts the autosomes (chromosomes 1 to 22) out from a DNV object originally generated using the readDNV function. You can also run this on objects generated from extractSNVs, extractINDELs, or extractMNVs
 }

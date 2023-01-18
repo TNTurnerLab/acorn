@@ -4,6 +4,9 @@
 \usage{
 calculateInsertionLengths(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 This function will automatically grab only the insertions from the DNV object for the calculation of the length of the insertions.
 }

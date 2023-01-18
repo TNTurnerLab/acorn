@@ -4,6 +4,9 @@
 \usage{
 countsPerIndividual(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 This function will count the DNVs from a DNV object originally generated using the readDNV function. You can also run this on objects generated from extractSNVs, extractINDELs, or extractMNVs.
 }

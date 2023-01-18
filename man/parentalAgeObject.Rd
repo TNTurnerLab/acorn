@@ -4,6 +4,11 @@
 \usage{
 parentalAgeObject(counts, parentalData)
 }
+\arguments{
+\item{counts}{DNV counts}
+
+\item{parentalData}{a parental data object}
+}
 \description{
 Takes in a counts object that is either the result of countsPerIndividual() or is already read into an object from a file that contains the following two fields: sample and number of DNVs. The parental age object should be read in and contain the following fields: sample, father age at child's birth, and mother age at child's birth.
 

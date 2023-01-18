@@ -4,6 +4,9 @@
 \usage{
 motherAge(parentalAgeObject)
 }
+\arguments{
+\item{parentalAgeObject}{a parental age object}
+}
 \description{
 This function will calculate the correlation between mother's age at birth and DNV counts per individual, the results of the linear model taking the form: lm(formula = dnm_counts ~ motherAge, data = parentalAgeObject). Input required is output from the parentalAgeObject function in this package.
 }

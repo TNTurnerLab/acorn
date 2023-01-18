@@ -4,6 +4,9 @@
 \usage{
 extractSNVs(DNVobject)
 }
+\arguments{
+\item{DNVobject}{a DNVobject}
+}
 \description{
 Extracts single-nucleotide variants (SNVs) out from a DNV object generated using the readDNV function.
 }
