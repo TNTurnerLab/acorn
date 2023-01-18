@@ -1,4 +1,8 @@
-calculateTiTvratio <- function(DNVobject) {
+calculateTiTvratio <- function(DNVobject = NULL) {
+if(is.null(DNVobject)){
+    cat(paste("missing datasets"))
+    } else {
+
     DNVobject <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
 
     #identify the different types of changes
@@ -15,4 +19,5 @@ calculateTiTvratio <- function(DNVobject) {
 
     cat(paste("Plot of different nucleotide changes: ", "\n", sep=""))
     barplot(table(ntchanges), col="steelblue1", main=paste("SNV changes (n=", length(ntchanges), ")", sep=""), xlab="reference > alternate", ylab="counts")
+    }
 }

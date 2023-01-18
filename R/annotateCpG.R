@@ -1,21 +1,23 @@
 annotateCpG <- function(DNVobject = NULL, CpGannotFile = NULL) {
 
-    dir <- system.file("extdata", package="acorn")
-    
+if(is.null(DNVobject) | is.null(CpGannotFile)){
+    cat(paste("missing datasets"))
+    } else {
+
     snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
     snvs$matcher <- paste(snvs$CHROM, snvs$POS_B38, sep="_")
 
     load(CpGannotFile)
 
-    cpg_b38 <- CpGannotFile
-    cpg_b38$matcher1 <- paste(cpg_b38$V1, cpg_b38$V3, sep="_")
-    cpg_b38$prepMatcher <- cpg_b38$V3-1
-    cpg_b38$matcher2 <- paste(cpg_b38$V1, cpg_b38$prepMatcher, sep="_")
+    CpGannotFile <- as.data.frame(CpGannotFile)
+    CpGannotFile$matcher1 <- paste(CpGannotFile$V1, CpGannotFile$V3, sep="_")
+    CpGannotFile$prepMatcher <- CpGannotFile$V3-1
+    CpGannotFile$matcher2 <- paste(CpGannotFile$V1, CpGannotFile$prepMatcher, sep="_")
 
-    cpg1 <- snvs[which(snvs$matcher %in% cpg_b38$matcher1),]
+    cpg1 <- snvs[which(snvs$matcher %in% CpGannotFile$matcher1),]
     cpg1$cpg <- "yes"
 
-    cpg2 <- snvs[which(snvs$matcher %in% cpg_b38$matcher2),]
+    cpg2 <- snvs[which(snvs$matcher %in% CpGannotFile$matcher2),]
     cpg2$cpg <- "yes"
 
     cpg <- rbind(cpg1, cpg2)
@@ -29,4 +31,5 @@ annotateCpG <- function(DNVobject = NULL, CpGannotFile = NULL) {
     cat(paste("The percent of DNV that are SNVs at CpG sites is: ", (nrow(cpg)/nrow(snvs))*100, "\n", sep=""))
 
     annotated
+    }
 }

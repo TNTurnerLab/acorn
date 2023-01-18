@@ -1,4 +1,7 @@
-motherAge <- function(parentalAgeObject) {
+motherAge <- function(parentalAgeObject = NULL) {
+if(is.null(parentalAgeObject)){
+    cat(paste("missing datasets"))
+    } else {
     plot(parentalAgeObject[,4], parentalAgeObject[,2], xlab="mother's age at birth", ylab="DNV counts")
 
     cor.test(parentalAgeObject[,4], parentalAgeObject[,2])
@@ -13,4 +16,5 @@ motherAge <- function(parentalAgeObject) {
     out <- list(cor.test(parentalAgeObject[,4], parentalAgeObject[,2]), summary(fitLinearAll), confint(fitLinearAll))
     attr(out, "names") <- c("correlation of mother's age at birth and DNV counts", "summary of linear model for mother's age at birth and DNV counts", "confidence interval of linear model for mother's age at birth and DNV counts")
     return(out)
+    }
 }

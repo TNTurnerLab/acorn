@@ -1,4 +1,8 @@
-countsPerIndividual <- function(DNVobject) {
+countsPerIndividual <- function(DNVobject = NULL) {
+if(is.null(DNVobject)){
+    cat(paste("missing datasets"))
+    } else {
+
     cat(paste("mean of the counts per individual:", "\n"))
     cat(mean(as.numeric(table(DNVobject[,1]))))
     cat("\n")
@@ -13,4 +17,6 @@ countsPerIndividual <- function(DNVobject) {
     countTable <- as.data.frame(table(DNVobject[,1]))
     colnames(countTable) <- c("sample", "dnv_count")
     countTable
+
+    }
 }
