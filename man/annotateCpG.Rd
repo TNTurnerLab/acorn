@@ -2,18 +2,20 @@
 \alias{annotateCpG}
 \title{Annotate the SNVs in the DNV dataset that reside at CpG sites}
 \usage{
-annotateCpG(DNVobject = NULL, CpGannotFile = NULL)
+annotateCpG(DNVobject = NULL, CpGannotFile = NULL, CpGannotFileName = NULL)
 }
 \arguments{
 \item{DNVobject}{a DNVobject}
 
 \item{CpGannotFile}{a CpG annotation file}
+
+\item{CpGannotFileName}{the name of the object in the CpG annotation file}
 }
 \description{
-Extracts single-nucleotide variants (SNVs) out from a DNV object generated using the readDNV function and assigns whether they are at a CpG site or not. This function also requires a pre-computed rda file for the CpG sites in the genome of interest. This is available for b38 of the human genome at: .
+Extracts single-nucleotide variants (SNVs) out from a DNV object generated using the readDNV function and assigns whether they are at a CpG site or not. This function also requires a pre-computed rda file for the CpG sites in the genome of interest. This is available for b38 of the human genome at: https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda. CpGannotFileName is the name of the CpG object you have saved in an rda file. For example, cpg_b38.rda the CpGannotFileName = cpg_b38
 }
 \examples{
-annotateCpG(DNVobject = NULL, CpGannotFile = NULL)
+annotateCpG(DNVobject = NULL, CpGannotFile = NULL, CpGannotFileName = NULL)
 }
 \value{
 Returns a DNV object containing only SNVs and includes a column with a note on whether the DNV is at a CpG or not. This function also prints out the number of CpG and the percent of DNV SNVs at CpG.

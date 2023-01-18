@@ -1,6 +1,6 @@
-annotateCpG <- function(DNVobject = NULL, CpGannotFile = NULL) {
+annotateCpG <- function(DNVobject = NULL, CpGannotFile = NULL, CpGannotFileName = NULL) {
 
-if(is.null(DNVobject) | is.null(CpGannotFile)){
+if(is.null(DNVobject) | is.null(CpGannotFile) | is.null(CpGannotFile)){
     cat(paste("missing datasets"))
     } else {
 
@@ -8,6 +8,8 @@ if(is.null(DNVobject) | is.null(CpGannotFile)){
     snvs$matcher <- paste(snvs$CHROM, snvs$POS_B38, sep="_")
 
     load(CpGannotFile)
+
+    CpGannotFile <- CpGannotFileName
 
     CpGannotFile <- as.data.frame(CpGannotFile)
     CpGannotFile$matcher1 <- paste(CpGannotFile$V1, CpGannotFile$V3, sep="_")
