@@ -1,4 +1,4 @@
-extractSNVs <- function(x) {
-    snvs <- x[which(nchar(as.character(x[,4])) == 1 & nchar(as.character(x[,5])) == 1),]
+extractSNVs <- function(DNVobject) {
+    snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
     snvs
 }

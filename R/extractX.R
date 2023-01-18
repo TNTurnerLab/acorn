@@ -1,4 +1,4 @@
-extractX <- function(x) {
-    autosomes <- x[which(x[,2] %in% c("chrX")),]
-    autosomes
+extractX <- function(DNVobject) {
+    x <- DNVobject[which(DNVobject[,2] %in% c("chrX")),]
+    x
 }

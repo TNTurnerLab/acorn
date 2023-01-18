@@ -1,8 +1,8 @@
-readDNV <- function(x) {
-    if(sapply(strsplit(as.character("~/Documents/Rpackages/acorn/inst/extdata/full_denovo_callset_sorted.txt.gz"), "\\."), tail, 1) == "gz"){
-        DNV <- read.delim(gzfile(x))
+readDNV <- function(DNVfile) {
+    if(sapply(strsplit(as.character(DNVfile), "\\."), tail, 1) == "gz"){
+        DNV <- read.delim(gzfile(DNVfile))
     } else {
-        DNV <- read.delim(x)
+        DNV <- read.delim(DNVfile)
     }
     DNV
 }

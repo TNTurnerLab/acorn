@@ -1,6 +1,6 @@
-calculateDeletionlengths <- function(x) {
+calculateDeletionLengths <- function(DNVobject) {
     #deletions
-    deletion <- x[which(nchar(as.character(x[,4])) > nchar(as.character(x[,5]))),]
+    deletion <- DNVobject[which(nchar(as.character(DNVobject[,4])) > nchar(as.character(DNVobject[,5]))),]
 
     #deletions
     deletionlengths <- nchar(as.character(deletion[,4]))

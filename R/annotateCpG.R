@@ -1,9 +1,13 @@
-annotateCpG <- function(dnvObject, CpGannotFile) {
+annotateCpG <- function(DNVobject = NULL, CpGannotFile = NULL) {
 
-    snvs <- dnvObject[which(nchar(as.character(dnvObject[,4])) == 1 & nchar(as.character(dnvObject[,5])) == 1),]
+    dir <- system.file("extdata", package="acorn")
+    
+    snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
     snvs$matcher <- paste(snvs$CHROM, snvs$POS_B38, sep="_")
 
     load(CpGannotFile)
+
+    cpg_b38 <- CpGannotFile
     cpg_b38$matcher1 <- paste(cpg_b38$V1, cpg_b38$V3, sep="_")
     cpg_b38$prepMatcher <- cpg_b38$V3-1
     cpg_b38$matcher2 <- paste(cpg_b38$V1, cpg_b38$prepMatcher, sep="_")

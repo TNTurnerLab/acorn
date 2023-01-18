@@ -1,9 +1,9 @@
-extractINDELs <- function(x) {
+extractINDELs <- function(DNVobject) {
     #deletions
-    deletion <- x[which(nchar(as.character(x[,4])) > nchar(as.character(x[,5]))),]
+    deletion <- DNVobject[which(nchar(as.character(DNVobject[,4])) > nchar(as.character(DNVobject[,5]))),]
 
     #insertions
-    insertion <- x[which(nchar(as.character(x[,4])) < nchar(as.character(x[,5]))),]
+    insertion <- DNVobject[which(nchar(as.character(DNVobject[,4])) < nchar(as.character(DNVobject[,5]))),]
 
     indel <- rbind(insertion, deletion)
     indel

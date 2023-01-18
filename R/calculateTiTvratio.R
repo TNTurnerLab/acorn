@@ -1,8 +1,8 @@
-calculateTiTvratio <- function(x) {
-    x <- x[which(nchar(as.character(x[,4])) == 1 & nchar(as.character(x[,5])) == 1),]
+calculateTiTvratio <- function(DNVobject) {
+    DNVobject <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
 
     #identify the different types of changes
-    ntchanges <- paste(x[,4], x[,5], sep=">")
+    ntchanges <- paste(DNVobject[,4], DNVobject[,5], sep=">")
 
     #transitions/transversions
     ti <- ntchanges[which(ntchanges %in% c("A>G", "C>T", "G>A", "T>C"))]
