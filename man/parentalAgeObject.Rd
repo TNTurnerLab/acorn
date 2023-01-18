@@ -2,7 +2,7 @@
 \alias{parentalAgeObject}
 \title{Generate a parental age object for using in downstream analyses of DNVs and parental age}
 \usage{
-parentalAgeObject(counts, parentalData)
+parentalAgeObject(counts = NULL, parentalData = NULL)
 }
 \arguments{
 \item{counts}{DNV counts}
@@ -15,7 +15,7 @@ Takes in a counts object that is either the result of countsPerIndividual() or i
 Examples of these data files are found in "inst/extdata/dnm_count_example.txt" and "inst/extdata/parental_age_example.txt"
 }
 \examples{
-parentalAgeObject("/path/to/directory/DNV_file.txt")
+parentalAgeObject(counts = NULL, parentalData = NULL)
 }
 \value{
 Returns back a an object with the de novo counts and parental age data together. The fields in this file are sample, dnm_counts, fatherAge, and motherAge.

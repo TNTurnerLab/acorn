@@ -2,7 +2,7 @@
 \alias{extractMNVs}
 \title{Extract MNVs from DNV object}
 \usage{
-extractMNVs(DNVobject)
+extractMNVs(DNVobject = NULL)
 }
 \arguments{
 \item{DNVobject}{a DNVobject}
@@ -11,7 +11,7 @@ extractMNVs(DNVobject)
 Extracts multi-nucleotide variants (MNVs) out from a DNV object generated using the readDNV function.
 }
 \examples{
-extractMNVs(DNVobject)
+extractMNVs(DNVobject = NULL)
 }
 \value{
 Returns a DNV object containing only MNVs
