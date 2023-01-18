@@ -1,5 +1,5 @@
 Package: acorn
-Title: This package is a toolkit for working with de novo variants.
+Title: This package is a toolkit for working with de novo variants
 Version: 0.99.0
 Authors@R: 
     c(person(given = "Tychele",
@@ -11,7 +11,7 @@ Description: Acorn works with de novo variants (DNVs) already called using a
     DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful
     for extracting different types of DNVs and summarizing characteristics of the 
     DNVs.
-License: MIT
+License: MIT + file LICENSE
 Depends: R (>= 3.5.0)
 Suggests: knitr
 VignetteBuilder: knitr
