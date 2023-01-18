@@ -1,7 +1,7 @@
 ---
 title: "acorn example in Rstudio"
 author: "Tychele N. Turner, Ph.D., Washington University School of Medicine"
-date: "2022-10-24"
+date: "2023-01-18"
 output:
   html_document: default
   pdf_document: default
@@ -76,7 +76,7 @@ calculateDeletionInsertionratio(input)
 
 ### calculate deletion lengths
 ```{r}
-dellengths <- calculateDeletionlengths(input)
+dellengths <- calculateDeletionLengths(input)
 head(dellengths)
 ```
 
@@ -108,7 +108,11 @@ nrow(Y)
 
 ### annotate the CpG (note it takes ~45 seconds to even read the CpG annotation file so this function is a little slow)
 ```{r}
-cpgResult <- annotateCpG(input, "~/Documents/Github/accessory_files/for_acorn/cpg_b38.rda")
+#The CpG human genome build 38 file is available here: https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda
+
+load("~/Documents/Github/accessory_files/for_acorn/cpg_b38.rda", verbose=TRUE)
+
+cpgResult <- annotateCpG(input, cpg_b38)
 head(cpgResult)
 ```
 
