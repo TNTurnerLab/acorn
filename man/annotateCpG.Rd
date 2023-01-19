@@ -7,9 +7,7 @@ annotateCpG(DNVobject = NULL, CpGannot = NULL)
 \arguments{
 \item{DNVobject}{a DNVobject}
 
-\item{CpGannotFile}{a CpG annotation file}
-
-\item{CpGannotFileName}{the name of the object in the CpG annotation file}
+\item{CpGannot}{a CpG annotation file object}
 }
 \description{
 Extracts single-nucleotide variants (SNVs) out from a DNV object generated using the readDNV function and assigns whether they are at a CpG site or not. This function also requires a pre-computed rda file for the CpG sites in the genome of interest. This is available for b38 of the human genome at: https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda. The user will want to load the file first and then use its object name to feed into this function in the CpGannot.

@@ -1,0 +1,155 @@
+---
+title: "acorn Vignette"
+author: "Tychele N. Turner, Ph.D., Washington University School of Medicine"
+date: "2023-01-18"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  html_document:
+    toc: yes
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{acorn Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### call up acorn
+```{r}
+library('acorn')
+```
+
+### check out acorn functions
+```{r}
+lsf.str("package:acorn")
+```
+
+### load in test data
+```{r}
+input <- readDNV(paste(path.package("acorn"),"/extdata/dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz",sep="")) 
+head(input)
+str(input)
+```
+
+### extract individual
+```{r}
+ind <- extractIndividual(input, "HG01928")
+head(ind)
+nrow(ind)
+table(ind[,1])
+```
+
+### extract individuals if you want
+```{r}
+ind <- extractIndividual(input, c("HG01928", "HG03915"))
+head(ind)
+nrow(ind)
+table(ind[,1])
+```
+
+### extract SNVs
+```{r}
+snvs <- extractSNVs(input)
+nrow(snvs)
+```
+
+### extract indels
+```{r}
+indels <- extractINDELs(input)
+nrow(indels)
+```
+
+### extract MNVs (there are none in the test set)
+```{r}
+mnvs <- extractMNVs(input)
+nrow(mnvs)
+```
+
+### calculate the Transition/Transversion ratio
+```{r}
+calculateTiTvratio(input)
+```
+
+### calculate deletion/insertion ratio
+```{r}
+calculateDeletionInsertionratio(input)
+```
+
+### calculate deletion lengths
+```{r}
+dellengths <- calculateDeletionLengths(input)
+head(dellengths)
+```
+
+### calculate insertion lengths
+```{r}
+inslengths <- calculateInsertionLengths(input)
+head(inslengths)
+```
+
+### keep only the autosomes
+```{r}
+aut <- extractAutosomes(input)
+nrow(aut)
+table(aut[,2])
+```
+
+### keep only the X chromosome
+```{r}
+X <- extractX(input)
+nrow(X)
+table(X[,2])
+```
+
+### keep only the Y chromosome (there are none on the Y in the test dataset)
+```{r}
+Y <- extractY(input)
+nrow(Y)
+```
+
+### calculate counts per individual
+```{r}
+counts <- countsPerIndividual(input)
+head(counts)
+```
+
+### load in example data for parental age analyses
+```{r}
+input <- readDNV(paste(path.package("acorn"),"/extdata/dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz",sep="")) 
+
+
+countExample <- read.delim(paste(path.package("acorn"),"/extdata/dnm_count_example.txt",sep=""))
+parentExample <- read.delim(paste(path.package("acorn"),"/extdata/parental_age_example.txt",sep=""))
+```
+
+### make parental age object
+```{r}
+parents <- parentalAgeObject(countExample, parentExample)
+```
+
+### run parental age analyses including both mother and father
+```{r}
+parentalAge(parents)
+```
+
+### run parental age analyses for father age only
+```{r}
+fatherAge(parents)
+```
+
+### run parental age analyses for mother age only
+```{r}
+motherAge(parents)
+```
+
+
+
+
+
