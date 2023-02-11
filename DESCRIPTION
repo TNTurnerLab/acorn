@@ -1,6 +1,6 @@
 Package: acorn
 Title: This package is a toolkit for working with de novo variants
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: 
     c(person(given = "Tychele",
     family = "Turner",
