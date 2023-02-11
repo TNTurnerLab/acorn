@@ -5,7 +5,7 @@ if(is.null(DNVobject) | is.null(CpGannot)){
     } else {
 
     snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
-    snvs$matcher <- paste(snvs$CHROM, snvs$POS_B38, sep="_")
+    snvs$matcher <- paste(snvs[,2], snvs[,3], sep="_")
 
     CpGannotFile <- CpGannot
 
@@ -22,7 +22,7 @@ if(is.null(DNVobject) | is.null(CpGannot)){
 
     cpg <- rbind(cpg1, cpg2)
 
-    notcpg <- snvs[!(snvs$ID %in% cpg$ID),]
+    notcpg <- snvs[!(snvs$matcher %in% cpg$matcher),]
     notcpg$cpg <- "no"
 
     annotated <- rbind(cpg, notcpg)
