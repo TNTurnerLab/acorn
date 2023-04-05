@@ -1,6 +1,6 @@
 Package: acorn
 Title: This package is a toolkit for working with de novo variants
-Version: 0.99.1
+Version: 0.99.2
 Authors@R: 
     c(person(given = "Tychele",
     family = "Turner",
@@ -16,3 +16,9 @@ Depends: R (>= 3.5.0)
 Suggests: knitr
 VignetteBuilder: knitr
 biocViews: GenomicVariation
+BugReports: https://github.com/TNTurnerLab/acorn/issues
+URL: https://github.com/TNTurnerLab/acorn
+Imports:
+    graphics,
+    stats,
+    utils
