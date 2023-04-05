@@ -6,7 +6,7 @@
 
 **License:** MIT License
 
-**Current version:** 0.99.4
+**Current version:** 0.99.5
 
 **Readme Update Date:** 04/05/2023
 
@@ -15,8 +15,8 @@
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.4.tar.gz
-R CMD INSTALL acorn_0.99.4.tar.gz
+wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.5.tar.gz
+R CMD INSTALL acorn_0.99.5.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
@@ -182,6 +182,5 @@ dnm_counts ~ motherAge, data = parentalAgeObject). It also returns a plot of
 mother's age at birth and DNV counts.
 ```
 
-**Implementation of functions in an Rstudio session:** An example of running the code in Rstudio is found [here](https://github.com/TNTurnerLab/acorn/blob/main/example/example_in_Rstudio.Rmd) and its output is [here](https://github.com/TNTurnerLab/acorn/blob/main/example/example_in_Rstudio.pdf) in the `example` directory.
-
+**Implementation of functions in an Rstudio session:** An example of running the code in Rstudio is found [here](https://github.com/TNTurnerLab/acorn/blob/main/vignettes/acorn_vignette.Rmd) and its output is [here](https://github.com/TNTurnerLab/acorn/blob/main/vignettes/acorn_vignette.pdf) in the `example` directory.
 
