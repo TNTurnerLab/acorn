@@ -21,17 +21,12 @@ vignette: >
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### call up acorn
+### Load the acorn Package
 ```{r}
 library('acorn')
 ```
 
-### check out acorn functions
-```{r}
-lsf.str("package:acorn")
-```
-
-### load in test data
+### Load in the Test DNV Data
 readDNV = Reads in a de novo variant (DNV) file in the format of sample, 
 chromosome, genomic position, reference allele, alternate allele, and 
 then any optional columns. File must be tab-delimited and the file must 
@@ -49,7 +44,7 @@ head(input)
 str(input)
 ```
 
-### extract individual
+### Extract an Individual
 extractIndividual = Extracts the DNVs out of a dnvObject from a particular 
 individual. Returns a DNV object containing only DNVs in the specified
 individual.
@@ -60,7 +55,7 @@ nrow(ind)
 table(ind[,1])
 ```
 
-### extract individuals if you want
+### Extract Multiple Individuals
 ```{r}
 ind <- extractIndividual(input, c("HG01928", "HG03915"))
 head(ind)
@@ -76,7 +71,7 @@ snvs <- extractSNVs(input)
 nrow(snvs)
 ```
 
-### extract indels
+### Extract INDELs Only
 extractINDELs = Extracts small insertions/deletions (INDELs) out from a DNV 
 object generated using the readDNV function. Returns a DNV object containing 
 only INDELs.
@@ -85,7 +80,7 @@ indels <- extractINDELs(input)
 nrow(indels)
 ```
 
-### extract MNVs (there are none in the test set)
+### Extract MNVs Only (There are None in the Test Set)
 extractMNVs = Extracts multi-nucleotide variants (MNVs) out from a DNV object
 generated using the readDNV function. Returns a DNV object containing only MNVs.
 ```{r}
@@ -93,7 +88,7 @@ mnvs <- extractMNVs(input)
 nrow(mnvs)
 ```
 
-### calculate the Transition/Transversion ratio
+### Calculate the Transition/Transversion Ratio
 calculateTiTvRatio = This function will automatically grab only the SNVs from 
 the DNV object for the calculation of the transition/transversion (Ti/Tv) ratio.
 Returns the counts of transitions, the counts of transversions, the Ti/Tv ratio,
@@ -102,7 +97,7 @@ and a barplot of the different types of SNV changes observed in the DNV object.
 calculateTiTvRatio(input)
 ```
 
-### calculate deletion/insertion ratio
+### Calculate the Deletion/Insertion Ratio
 calculateDeletionInsertionRatio = This function will automatically grab only 
 the INDELs from the DNV object for the calculation of the deletion/insertion 
 ratio. Returns the counts of deletions, the counts of insertions, and the
@@ -111,8 +106,8 @@ deletion/insertion ratio.
 calculateDeletionInsertionRatio(input)
 ```
 
-### calculate deletion lengths
-calculateDeletionlengths = This function will automatically grab only the 
+### Calculate Deletion Lengths
+calculateDeletionLengths = This function will automatically grab only the 
 deletions from the DNV object for the calculation of the length of the 
 deletions. Returns the length of the deletions, in the form of an object, 
 observed in the DNV object. It also returns a barplot of the deletion lengths.
@@ -121,7 +116,7 @@ dellengths <- calculateDeletionLengths(input)
 head(dellengths)
 ```
 
-### calculate insertion lengths
+### Calculate Insertion Lengths
 calculateInsertionLengths = This function will automatically grab only the 
 insertions from the DNV object for the calculation of the length of the 
 insertions. Returns the length of the insertions, in the form of an object, 
@@ -131,7 +126,7 @@ inslengths <- calculateInsertionLengths(input)
 head(inslengths)
 ```
 
-### keep only the autosomes
+### Keep Only the Autosomes
 extractAutosomes = Extracts the autosomes (chromosomes 1 to 22) out from a DNV 
 object originally generated using the readDNV function. You can also run this 
 on objects generated from extractSNVs, extractINDELs, or extractMNVs. Returns 
@@ -142,7 +137,7 @@ nrow(aut)
 table(aut[,2])
 ```
 
-### keep only the X chromosome
+### Keep Only the X Chromosome
 extractX = Extracts the X chromosome out from a DNV object originally generated 
 using the readDNV function. You can also run this on objects generated from
 extractSNVs, extractINDELs, or extractMNVs. Returns a DNV object containing 
@@ -153,7 +148,7 @@ nrow(X)
 table(X[,2])
 ```
 
-### keep only the Y chromosome (there are none on the Y in the test dataset)
+### Keep Only the Y Chromosome (There are Mone on the Y in the Test Dataset)
 extractY = Extracts the Y chromosome DNVs out from a DNV object originally 
 generated using the readDNV function. You can also run this on objects 
 generated from extractSNVs, extractINDELs, or extractMNVs. Returns a DNV 
@@ -163,7 +158,7 @@ Y <- extractY(input)
 nrow(Y)
 ```
 
-### calculate counts per individual
+### Calculate Counts per Individual
 countsPerIndividual = This function will count the DNVs from a DNV object 
 originally generated using the readDNV function. You can also run this on 
 objects generated from extractSNVs, extractINDELs, or extractMNVs. Returns 
@@ -176,7 +171,7 @@ counts <- countsPerIndividual(input)
 head(counts)
 ```
 
-### load in example data for parental age analyses
+### Load in Example Data for Parental Age Analyses
 ```{r}
 input <- readDNV(paste(path.package("acorn"),"/extdata/dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz",sep="")) 
 
@@ -185,7 +180,7 @@ countExample <- read.delim(paste(path.package("acorn"),"/extdata/dnm_count_examp
 parentExample <- read.delim(paste(path.package("acorn"),"/extdata/parental_age_example.txt",sep=""))
 ```
 
-### make parental age object
+### Make Parental Age Object
 parentalAgeObject = Takes in a counts object that is either the result of
 countsPerIndividual() or is already read into an object from a file that 
 contains the following two fields: sample and number of DNVs. The parental 
@@ -197,7 +192,7 @@ fields in this file are sample, dnm_counts, fatherAge, and motherAge.
 parents <- parentalAgeObject(countExample, parentExample)
 ```
 
-### run parental age analyses including both mother and father
+### Run Parental Age Analyses Including Both Mother and Father
 parentalAge = This function will calculate the correlation between father's 
 and mother's age at birth and DNV counts per individual, the results of the 
 linear model taking the form: lm(formula = dnm_counts ~ fatherAge+motherAge, 
@@ -210,7 +205,7 @@ at birth and DNV counts.
 parentalAge(parents)
 ```
 
-### run parental age analyses for father age only
+### Run Parental Age Analyses for Father Age Only
 fatherAge = This function will calculate the correlation between father's 
 age at birth and DNV counts per individual, the results of the linear model 
 taking the form: lm(formula = dnm_counts ~ fatherAge, data = parentalAgeObject).
@@ -223,7 +218,7 @@ of father's age at birth and DNV counts.
 fatherAge(parents)
 ```
 
-### run parental age analyses for mother age only
+### Run Parental Age Analyses for Mother Age Only
 motherAge = This function will calculate the correlation between mother's 
 age at birth and DNV counts per individual, the results of the linear model 
 taking the form: lm(formula = dnm_counts ~ motherAge, data = parentalAgeObject).
