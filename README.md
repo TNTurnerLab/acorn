@@ -6,7 +6,7 @@
 
 **License:** MIT License
 
-**Current version:** 0.99.2
+**Current version:** 0.99.3
 
 **Readme Update Date:** 04/05/2023
 
@@ -15,8 +15,8 @@
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.2.tar.gz
-R CMD INSTALL acorn_0.99.2.tar.gz
+wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.3.tar.gz
+R CMD INSTALL acorn_0.99.3.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
@@ -101,7 +101,7 @@ the INDELs from the DNV object for the calculation of the deletion/insertion
 ratio. Returns the counts of deletions, the counts of insertions, and the
 deletion/insertion ratio.
 
-calculateDeletionlengths = This function will automatically grab only the 
+calculateDeletionLengths = This function will automatically grab only the 
 deletions from the DNV object for the calculation of the length of the 
 deletions. Returns the length of the deletions, in the form of an object, 
 observed in the DNV object. It also returns a barplot of the deletion lengths.
@@ -111,7 +111,7 @@ insertions from the DNV object for the calculation of the length of the
 insertions. Returns the length of the insertions, in the form of an object, 
 observed in the DNV object. It also returns a barplot of the insertion lengths.
 
-calculateMNVlengths = This function will automatically grab only the 
+calculateMNVLengths = This function will automatically grab only the 
 multi-nucleotide variants (MNVs) from the DNV object for the calculation of 
 the length of the MNVs. Returns the length of the MNVs, in the form of an 
 object, observed in the DNV object. It also returns a barplot of the MNVs 
