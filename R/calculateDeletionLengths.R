@@ -1,6 +1,6 @@
 calculateDeletionLengths <- function(DNVobject = NULL) {
 if(is.null(DNVobject)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
     #deletions
     deletion <- DNVobject[which(nchar(as.character(DNVobject[,4])) > nchar(as.character(DNVobject[,5]))),]

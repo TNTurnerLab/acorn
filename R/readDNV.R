@@ -1,6 +1,6 @@
 readDNV <- function(DNVfile = NULL) {
 if(is.null(DNVfile)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
 
     if(sapply(strsplit(as.character(DNVfile), "\\."), tail, 1) == "gz"){

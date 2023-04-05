@@ -1,7 +1,7 @@
-calculateDeletionInsertionratio <- function(DNVobject = NULL) {
+calculateDeletionInsertionRatio <- function(DNVobject = NULL) {
 
 if(is.null(DNVobject)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
     #deletions
     deletion <- DNVobject[which(nchar(as.character(DNVobject[,4])) > nchar(as.character(DNVobject[,5]))),]
@@ -9,8 +9,8 @@ if(is.null(DNVobject)){
     #insertions
     insertion <- DNVobject[which(nchar(as.character(DNVobject[,4])) < nchar(as.character(DNVobject[,5]))),]
 
-    cat(paste("number of deletions", nrow(deletion), "\n"))
-    cat(paste("number of insertions", nrow(insertion), "\n"))
-    cat(paste("deletion/insertion ratio: ", nrow(deletion)/nrow(insertion), "\n"))
+    message("number of deletions: ", nrow(deletion), "\n")
+    message("number of insertions: ", nrow(insertion), "\n")
+    message("deletion/insertion ratio: ", nrow(deletion)/nrow(insertion), "\n")
     }
 }

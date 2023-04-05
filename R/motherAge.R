@@ -1,6 +1,6 @@
 motherAge <- function(parentalAgeObject = NULL) {
 if(is.null(parentalAgeObject)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
     plot(parentalAgeObject[,4], parentalAgeObject[,2], xlab="mother's age at birth", ylab="DNV counts")
 

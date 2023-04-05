@@ -1,6 +1,6 @@
 extractINDELs <- function(DNVobject = NULL) {
 if(is.null(DNVobject)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
 
     #deletions

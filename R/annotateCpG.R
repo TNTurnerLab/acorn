@@ -1,7 +1,7 @@
 annotateCpG <- function(DNVobject = NULL, CpGannot = NULL) {
 
 if(is.null(DNVobject) | is.null(CpGannot)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
 
     snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
@@ -26,9 +26,9 @@ if(is.null(DNVobject) | is.null(CpGannot)){
     notcpg$cpg <- "no"
 
     annotated <- rbind(cpg, notcpg)
-    cat(paste("The number of DNVs at CpG sites is: ", nrow(cpg), "\n", sep=""))
-    cat(paste("The total number of SNVs is: ", nrow(snvs), "\n", sep=""))
-    cat(paste("The percent of DNV that are SNVs at CpG sites is: ", (nrow(cpg)/nrow(snvs))*100, "\n", sep=""))
+    message("The number of DNVs at CpG sites is: ", nrow(cpg), "\n", sep="")
+    message("The total number of SNVs is: ", nrow(snvs), "\n", sep="")
+    message("The percent of DNV that are SNVs at CpG sites is: ", (nrow(cpg)/nrow(snvs))*100, "\n", sep="")
 
     annotated
     }

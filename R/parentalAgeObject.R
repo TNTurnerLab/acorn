@@ -1,6 +1,6 @@
 parentalAgeObject <- function(counts = NULL, parentalData = NULL) {
 if(is.null(counts) | is.null(parentalData)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
 
     colnames(counts) <- c("sample", "dnm_counts")

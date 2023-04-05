@@ -1,6 +1,6 @@
 parentalAge <- function(parentalAgeObject = NULL) {
 if(is.null(parentalAgeObject)){
-    cat(paste("missing datasets"))
+    message("missing datasets")
     } else {
 
     plot(parentalAgeObject[,3], parentalAgeObject[,2], xlab="parent age at birth", ylab="DNV counts", col="steelblue1", pch=19, xlim=c(16,max(parentalAgeObject[,3])+5))
