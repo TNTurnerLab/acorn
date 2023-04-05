@@ -1,7 +1,7 @@
 ---
 title: "acorn Vignette"
 author: "Tychele N. Turner, Ph.D., Washington University School of Medicine"
-date: "2023-01-18"
+date: "2023-04-05"
 output:
   pdf_document:
     toc: yes
@@ -231,7 +231,7 @@ mother's age at birth and DNV counts.
 motherAge(parents)
 ```
 
-
-
-
-
+### Print the Session Information
+```{r}
+sessionInfo()
+```
