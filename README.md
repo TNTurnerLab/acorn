@@ -6,7 +6,7 @@
 
 **License:** MIT License
 
-**Current version:** 0.99.3
+**Current version:** 0.99.4
 
 **Readme Update Date:** 04/05/2023
 
@@ -15,8 +15,8 @@
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.3.tar.gz
-R CMD INSTALL acorn_0.99.3.tar.gz
+wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.4.tar.gz
+R CMD INSTALL acorn_0.99.4.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
