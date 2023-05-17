@@ -6,4 +6,4 @@ date: "2023-04-05"
 
 # acorn (development version)
 
-# acorn 0.99.5
+# acorn 0.99.6
