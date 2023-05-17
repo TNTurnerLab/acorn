@@ -6,7 +6,7 @@
 
 **License:** MIT License
 
-**Current version:** 0.99.6
+**Current version:** 0.99.7
 
 **Readme Update Date:** 04/05/2023
 
@@ -15,8 +15,8 @@
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.6.tar.gz
-R CMD INSTALL acorn_0.99.6.tar.gz
+wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.7.tar.gz
+R CMD INSTALL acorn_0.99.7.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
@@ -35,7 +35,7 @@ parental_age_example.txt
 
 **Current Functions:**
 
-Function to read in a file for use in many of the other functions in acorn.
+Function to read in a file for use in many of the other functions in acorn. If you have not yet called de novo variants from your sequencing data, check out our tool called HAT at https://github.com/TNTurnerLab/HAT. Within the HAT GitHub repository, there is a code called `squirrel.py` that can convert HAT output to acorn input for use with this R package.
 ```
 readDNV = Reads in a de novo variant (DNV) file in the format of sample, 
 chromosome, genomic position, reference allele, alternate allele, and 
