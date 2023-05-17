@@ -84,8 +84,19 @@ nrow(indels)
 extractMNVs = Extracts multi-nucleotide variants (MNVs) out from a DNV object
 generated using the readDNV function. Returns a DNV object containing only MNVs.
 ```{r}
-mnvs <- extractMNVs(input)
+denovoMNVs <- readDNV(paste(path.package("acorn"),"/extdata/mnv_test.txt",sep="")) 
+
+mnvs <- extractMNVs(denovoMNVs)
 nrow(mnvs)
+```
+
+### Calculate the MNV Lengths
+calculateMNVLengths = This function will automatically grab only 
+the MNVs from the DNV object for the calculation of the MNV lengths 
+ratio. Returns the length of the MNVs, in the form of an object, 
+observed in the DNV object. It also returns a barplot of the MNV lengths.
+```{r}
+calculateMNVLengths(mnvs)
 ```
 
 ### Calculate the Transition/Transversion Ratio
