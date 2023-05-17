@@ -129,7 +129,7 @@ human genome at:
 https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda. 
 Returns a DNV object containing only SNVs and includes a column with a 
 note on whether the DNV is at a CpG or not. This function also prints 
-out the number of CpG and the precent of DNV SNVs at CpG. Please note 
+out the number of CpG and the percent of DNV SNVs at CpG. Please note 
 this function typically takes at least one minute to run.
 ```
 
