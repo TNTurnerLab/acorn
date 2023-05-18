@@ -4,7 +4,7 @@ if(is.null(DNVobject) | is.null(CpGannot)){
     message("missing datasets")
     } else {
 
-    snvs <- DNVobject[which(nchar(as.character(DNVobject[,4])) == 1 & nchar(as.character(DNVobject[,5])) == 1),]
+    snvs <- extractSNVs(DNVobject)
     snvs$matcher <- paste(snvs[,2], snvs[,3], sep="_")
 
     CpGannotFile <- CpGannot
