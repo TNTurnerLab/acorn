@@ -6,6 +6,8 @@ parentalAge(parentalAgeObject = NULL, modelType="linear", parent="both")
 }
 \arguments{
 \item{parentalAgeObject}{a parental age object}
+\item{modelType}{user-specified model type (default is linear model)}
+\item{parent}{user-specified parents (default="both")}
 }
 \description{
 This function will calculate the correlation between father's and mother's age at birth and DNV counts per individual, the results of the linear model taking the form: lm(formula = dnm_counts ~ fatherAge+motherAge, data = parentalAgeObject) or the exponential model taking the form lm(log(dnm_counts)~fatherAge+motherAge, data=parentalAgeObject). Input required is output from the parentalAgeObject function in this package. Options are modelType of "linear" or "exponential" with the default being "linear" and the parent(s) for the analysis with the default being both and an option of father or mother, respectively.
