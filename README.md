@@ -191,21 +191,27 @@ returns a plot of father's and mother's age at birth and DNV counts.
 
 fatherAge = This function will calculate the correlation between father's 
 age at birth and DNV counts per individual, the results of the linear model 
-taking the form: lm(formula = dnm_counts ~ fatherAge, data = parentalAgeObject).
+taking the form: lm(formula = dnm_counts ~ fatherAge, data = parentalAgeObject)
+or the exponetial model taking the form
+lm(log(dnm_counts)~fatherAge, data=parentalAgeObject).
 Input required is output from the parentalAgeObject function in this package.
 Returns the correlation between father's age at birth and DNV counts per 
 individual and the results of the linear model taking the form: lm(formula =
-dnm_counts ~ fatherAge, data = parentalAgeObject). It also returns a plot 
-of father's age at birth and DNV counts.
+dnm_counts ~ fatherAge, data = parentalAgeObject) or the exponential model taking
+the form  lm(log(dnm_counts)~fatherAge, data=parentalAgeObject). 
+It also returns a plot of father's age at birth and DNV counts.
 
 motherAge = This function will calculate the correlation between mother's 
 age at birth and DNV counts per individual, the results of the linear model 
-taking the form: lm(formula = dnm_counts ~ motherAge, data = parentalAgeObject).
+taking the form: lm(formula = dnm_counts ~ motherAge, data = parentalAgeObject) 
+or the exponential model taking the form
+lm(log(dnm_counts)~motherAge, data=parentalAgeObject).
 Input required is output from the parentalAgeObject function in this package.
 Returns the correlation between mother's age at birth and DNV counts per 
 individual and the results of the linear model taking the form: lm(formula =
-dnm_counts ~ motherAge, data = parentalAgeObject). It also returns a plot of
-mother's age at birth and DNV counts.
+dnm_counts ~ motherAge, data = parentalAgeObject) or the exponential model
+taking the form lm(log(dnm_counts)~motherAge, data=parentalAgeObject). 
+It also returns a plot of mother's age at birth and DNV counts.
 ```
 
 **Implementation of functions in an Rstudio session:** An example of running the code in Rstudio is found [here](https://github.com/TNTurnerLab/acorn/blob/main/vignettes/acorn_vignette.Rmd) and its output is [here](https://github.com/TNTurnerLab/acorn/blob/main/vignettes/acorn_vignette.pdf) in the `example` directory.
