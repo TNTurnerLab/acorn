@@ -1,7 +1,7 @@
 ---
 title: "acorn Vignette"
 author: "Tychele N. Turner, Ph.D., Washington University School of Medicine"
-date: "2023-04-05"
+date: "2023-05-18"
 output:
   pdf_document:
     toc: yes
@@ -11,8 +11,8 @@ output:
     toc_depth: 3
 vignette: >
   %\VignetteIndexEntry{acorn Vignette}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 
@@ -80,7 +80,7 @@ indels <- extractINDELs(input)
 nrow(indels)
 ```
 
-### Extract MNVs Only (There are None in the Test Set)
+### Extract MNVs Only (This is a very small test set)
 extractMNVs = Extracts multi-nucleotide variants (MNVs) out from a DNV object
 generated using the readDNV function. Returns a DNV object containing only MNVs.
 ```{r}

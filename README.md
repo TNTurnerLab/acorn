@@ -6,7 +6,7 @@
 
 **License:** MIT License
 
-**Current version:** 0.99.8
+**Current version:** 0.99.9
 
 **Readme Update Date:** 05/18/2023
 
@@ -15,8 +15,8 @@
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.8.tar.gz
-R CMD INSTALL acorn_0.99.8.tar.gz
+wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/acorn_releases/acorn_0.99.9.tar.gz
+R CMD INSTALL acorn_0.99.9.tar.gz
 ```
 
 **Example Files:** Files for use in testing are available in `inst/extdata` folder in acorn and include
@@ -25,6 +25,7 @@ Example DNV files
 ```
 dnms_from_Ng_et_al_2022_Human_Mutation_paper.txt.gz
 dnms_from_Ng_et_al_2022_Human_Mutation_paper_not_compressed.txt
+mnv_test.txt
 ```
 
 Example files for parental age information
