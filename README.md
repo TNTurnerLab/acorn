@@ -134,11 +134,14 @@ this function typically takes at least one minute to run.
 ```
 
 Further information on `annotateCpG`
-The CpG annotation file used is too large to package within acorn and that is why it is not included in the vignette. If you want to test out the annotateCpG function, please run the following
+The CpG annotation file used is too large to package within acorn and 
+that is why it is not included in the vignette. If you want to test out the 
+`annotateCpG` function, please run the following
 
-* Download the b38 annotation file (outside of R)
+* In R, download the b38 annotation file (your system will need `wget`). You 
+could also download directly to your computer outside of R.
 ```
-wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda
+system("wget https://data.cyverse.org/dav-anon/iplant/home/tycheleturner/genomic_annotations/cpg_b38.rda")
 ```
 
 * In R, run the test data
