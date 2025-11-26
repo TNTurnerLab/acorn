@@ -12,7 +12,7 @@
 
 **Readme Update Date:** 11/26/2025
 
-**Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
+**Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., [HAT](https://github.com/TNTurnerLab/HAT), [HAT-FLEX](https://github.com/TNTurnerLab/HAT-FLEX). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
 
 ---
 
