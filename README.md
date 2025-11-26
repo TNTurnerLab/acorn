@@ -2,15 +2,24 @@
 
 ![Acorn](image/2022-10-23_Acorn_TNT_blt.jpg "Acorn")
 
+---
+
 **Author:** Tychele N. Turner, Ph.D.
 
 **License:** MIT License
 
 **Current version:** 0.99.9
 
-**Readme Update Date:** 05/18/2023
+**Readme Update Date:** 11/26/2025
 
 **Description:** Acorn is an R package that works with de novo variants (DNVs) already called using a DNV caller (e.g., https://github.com/TNTurnerLab/HAT). The toolkit is useful for extracting different types of DNVs and summarizing characteristics of the DNVs.
+
+---
+
+> [!NOTE]
+> Please cite this paper if using this tool: Turner TN. Acorn: an R package for de novo variant analysis. BMC Bioinformatics. 2023 Sep 2;24(1):330. doi: 10.1186/s12859-023-05457-z. PMID: 37660114; PMCID: PMC10475174.
+
+---
 
 **Install:**
 The two commands below should install acorn to R and make it callable inside R with `library('acorn')`. Please note you should have R installed already on your computer.
